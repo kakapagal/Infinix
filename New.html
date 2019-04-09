@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap New</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script src="js/angular js.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="container" id="myDIV">
+		<pre>class="progress-bar" style="width:25%"</pre>
+<div class="progress">
+	
+	<div class="progress-bar" style="width:25%">inline Css 25%</div>
+</div>
+<br>
+<pre>class="progress-bar w-25"</pre>
+<div class="progress">
+    <div class="progress-bar w-25">Bootstrapp css w-25 25%</div>
+</div>
+<br>
+	<div class="spinner-border text-muted"></div>
+<div class="spinner-border text-primary"></div>
+<div class="spinner-border text-success">Pak</div>
+<div class="spinner-border text-info"><button class="btn btn-primary rounded-circle">B</button></div>
+<div class="spinner-border text-warning">&copy;</div>
+<div class="spinner-border text-danger">&times;</div>
+<div class="spinner-border text-secondary"></div>
+<div class="spinner-border text-dark"></div>
+<div class="spinner-border text-light"></div>
+	<!--Border Spinner End -->
+	<br>
+	<div class="spinner-grow text-muted"></div>
+<div class="spinner-grow text-primary"></div>
+<div class="spinner-grow text-success"><span class="bg-danger">Hello G</span></div>
+<div class="spinner-grow text-info"></div>
+<div class="spinner-grow text-warning"></div>
+<div class="spinner-grow text-danger"></div>
+<div class="spinner-grow text-secondary"></div>
+<div class="spinner-grow text-dark"></div>
+<div class="spinner-grow text-light"></div>
+	
+	<!-- Grow Spinner End -->
+	
+<div class="progress h-25">
+	<div class="progress-bar w-25  bg-info">w-25</div>
+	<div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 10%">Animatid</div>
+	<div class="progress-bar w-50 bg-success ">w-50</div>
+	 <div class="progress-bar bg-warning" style="width:5%;">style="width:5%"</div>
+
+	</div>
+	
+</div> <!--Container Div Close -->
+	<br>
+	<div class="container">
+		<div ng-app=""  ng-init="name='Shahzad'">
+	   <form class="was-validated">
+		<div class="form-group">
+		   <input type="text" ng-model="name"  class="form-control" required/>
+		<div class="valid-feedback">Valid.</div>
+       <div class="invalid-feedback">Please fill out this field.</div>
+		   </div>
+		<div class="container">
+		<div ng-app=""  ng-init="name='Shahzad'">
+	   <form class="was-validated">
+		<div class="form-group">
+		   <input type="search" id="myInput" class="form-control" placeholder="Search Any Think" required/>
+		<div class="valid-feedback"><span class="spinner-border text-dark"></span>Searching</div>
+       <div class="invalid-feedback">Please Search</div>
+		   </div>
+		   
+		</form>
+			<br>
+		<div class="spinner-grow text-light"><span class="bg-danger align-text-bottom">Hello {{name}}</span></div>
+	</div>
+		
+	</div> <!-- Angular Container-->
+	
+	<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myDIV *").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>
